@@ -1,16 +1,39 @@
-// c코드 공부하기
-// 내일 다시 수정하기
-
 #include <stdio.h>
  
-int main(void) {
-    char str[] = "REPUBLICOFKOREA";
-    int a = 0;
- 
-    while (str[a] != '\0')
-        ++a;
- 
-    putchar(str[a - 2]);
-    return 0;
+double arr1(int p[], int len) {
+    double av = 0;
+    int i;
+    for (i = 0; i < len; i++) {
+        av += (double) p[i];
+    }
+    return av / len;
 }
  
+double arr2(int * p, int len) {
+    double av = 0;
+    int i;
+    for (i = 0; i < len; i++) {
+        av += (double)( * (p + i));
+    }
+    return av / len;
+}
+ 
+int main() {
+    int arr[10] = {
+        80,
+        20,
+        50,
+        55,
+        45,
+        95,
+        55,
+        10,
+        40,
+        80
+    };
+    int len = 10;
+ 
+    printf("%.2f", arr1(arr, len) + arr2(arr, len));
+ 
+    return 0;
+}
