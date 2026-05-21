@@ -1,3 +1,5 @@
+//  정처기 1번 공부 똑같은 답이지만 다른 방법으로 푸는 것
+//  .2f는 소수점 2자리까지 쓰기
 #include <stdio.h>
  
 double arr1(int p[], int len) {
